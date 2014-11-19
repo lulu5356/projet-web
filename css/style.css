@@ -5,6 +5,24 @@ body{
 	overflow-x: hidden;
 	margin: 0;
 }
+
+nav{
+	top:0;
+	position: fixed;
+	height: 20px;
+	padding-bottom: 10px;
+}
+
+nav li{
+	display: inline;
+}
+
+#frise{
+	margin-top: 50px;
+	height: 50px;
+	background-image:linear-gradient(to right, blue, black, white, red, yellow, green);
+	width: 100%;
+}
 #page-wrap{
 	display: table;
 }
@@ -12,13 +30,11 @@ body{
 	padding-top: 50px;
 	display: table-cell;
 }
-nav{
-	position: fixed;
-}
 
-nav li{
-	display: inline;
-}
 h2{
 	width: 100%;
+}
+
+img{
+	height: 500px;
 }

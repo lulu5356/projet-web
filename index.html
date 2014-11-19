@@ -12,15 +12,17 @@
 	<script>
 		function adpaterALaTailleDeLaFenetre(){
 			var largeur = document.documentElement.clientWidth,
-			hauteur = document.documentElement.clientHeight-200;
+			hauteur = document.documentElement.clientHeight-100;
 
 		  var source = document.querySelectorAll(".post"); // récupère l'id source
 		  var ligne = document.querySelector("#page-wrap");
+		  var ligne2 = document.querySelector("#frise");
 		  for (var i = 0; i < source.length; i++) {
 		  	source[i].style.width = largeur+'px';
 		  	source[i].style.height = hauteur+'px';
 		  }
 		  ligne.style.width = largeur*i+'px';
+		  ligne2.style.width = largeur*i+'px';
 		}
 
 		// Une fonction de compatibilité pour gérer les évènements
@@ -40,7 +42,7 @@
 	<script>
 		$(function(){
 			$("body").mousewheel(function(event, delta) {
-				this.scrollLeft -= (delta * 60);
+				this.scrollLeft -= (delta * 100);
 				event.preventDefault();
 			});   
 		});
@@ -48,30 +50,30 @@
 	<title>Accueil</title>
 </head>
 <body onload="adpaterALaTailleDeLaFenetre()">
-	<h1>Horizontally Scrolling Site</h1>
 	<nav id="menu">
 		<ul>
-			<li><a href="#slide1">slide 1</a></li>
-			<li><a href="#slide2">slide 2</a></li>
+			<li><a href="#slide1">Avant 1946</a></li>
+			<li><a href="#slide2">1946</a></li>
 			<li><a href="#slide3">slide 3</a></li>
 			<li><a href="#slide4">slide 4</a></li>
 			<li><a href="#slide5">slide 5</a></li>
 			<li><a href="#slide6">slide 6</a></li>
 		</ul>
 	</nav>
+	<div id="frise">
+		<p>Lorem ipsum dolor sit amet, consectetur.</p>
+	</div>
 
 	<div id="page-wrap">
 		
 		<div class="post" id="slide1">
-			<h2>Post Title Example One</h2>
-			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
-			
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
+			<h2>Avant 1946</h2>
+			<p>En 1939 Les ordinateurs n'existaient pas comme on les connaient il s'agissait de machine programmable comme l'Harvard Mark I et le Z3</p>
+			<img src="img/Harvard_Mark_I.jpg" alt="Harvard Mark I" style="margin-right: 15px;"><img src="img/Z3.jpg" alt="Z3">
 		</div>
 		
 		<div class="post" id="slide2">
-			<h2>Post Title Example Two</h2>
+			<h2>1946 Premier ordinateur</h2>
 			<p>By <a href="http://css-tricks.com"><strong>CSS</strong>-Tricks</a></p>
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse aliquet arcu a ipsum. Nunc arcu est, pulvinar vitae, consectetuer ac, pellentesque interdum, augue. Fusce iaculis nulla et sapien. Aliquam erat volutpat. Etiam iaculis turpis nec libero. Nam adipiscing ullamcorper quam. Pellentesque erat. Sed hendrerit. Duis id nisl. Cras arcu mauris, mollis vel, convallis non, elementum a, tortor. Donec ac est eget elit consequat sollicitudin. In id odio quis tortor volutpat mollis. Nulla iaculis lobortis est. Pellentesque in elit vitae nulla tempus euismod. Nam non erat in lacus rutrum malesuada. Donec commodo purus sed quam posuere eleifend. Nam accumsan.</p>
 		</div>
