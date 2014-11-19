@@ -5,8 +5,20 @@ body{
 	overflow-x: hidden;
 	margin: 0;
 }
+#page-wrap{
+	display: table;
+}
+.post{
+	padding-top: 50px;
+	display: table-cell;
+}
+nav{
+	position: fixed;
+}
 
-
+nav li{
+	display: inline;
+}
 h2{
 	width: 100%;
 }
